@@ -1,0 +1,14 @@
+{
+    "window.title": "Application",
+    "editor.renderWhitespace": "boundary",
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/dist": true,
+      "**/lib": true
+    },
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.reportStyleChecksAsWarnings": false
+  }
+  
