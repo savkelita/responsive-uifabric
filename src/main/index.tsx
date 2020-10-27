@@ -57,7 +57,6 @@ const CustomNavigation: React.FunctionComponent = () => {
   return (
     <div
       style={{
-        overflow: 'hidden',
         ...(isOpen ? { width: '17rem', transition: 'all 0.3s' } : { width: '2rem' }),
       }}
       className="app-sidemenu ms-hiddenSm"
@@ -69,14 +68,17 @@ const CustomNavigation: React.FunctionComponent = () => {
           iconName: isOpen ? 'DoubleChevronLeft8' : 'DoubleChevronRight8',
         }}
       />
-      <Nav
-        styles={{
-          root: {
-            overflow: 'hidden',
-          },
-        }}
-        groups={navGroups}
-      />
+      <div style={{ overflow: 'auto' }}>
+        <Nav
+          styles={{
+            root: {
+              // Todo: Custom Scrollbar
+              overflow: 'hidden',
+            },
+          }}
+          groups={navGroups}
+        />
+      </div>
     </div>
   )
 }
