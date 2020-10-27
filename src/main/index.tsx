@@ -4,6 +4,7 @@ import { IconButton } from 'office-ui-fabric-react/lib/Button'
 import { Nav, INavLinkGroup } from 'office-ui-fabric-react/lib/Nav'
 import { Panel, PanelType } from 'office-ui-fabric-react/lib/Panel'
 import { IPersonaSharedProps, Persona, PersonaSize, PersonaPresence } from 'office-ui-fabric-react/lib/Persona'
+import { Separator } from 'office-ui-fabric-react/lib/Separator'
 import { Stack } from 'office-ui-fabric-react/lib/Stack'
 import { TextField } from 'office-ui-fabric-react/lib/TextField'
 
@@ -173,20 +174,81 @@ export const App = () => {
           />
           <div className="ms-Grid" dir="ltr">
             <div className="ms-Grid-row">
+              <div className="ms-Grid-col ms-sm12 ms-md12">
+                <h3>Vertical</h3>
+                <Stack styles={{ root: { marginBottom: 20 } }}>
+                  <Stack.Item grow={1}>
+                    <TextField label="Standard" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Disabled" disabled={true} defaultValue="I am disabled" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Read-only" readOnly={true} defaultValue="I am read-only" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Required " required={true} />
+                  </Stack.Item>
+                </Stack>
+              </div>
+              <div className="ms-Grid-col ms-sm12 ms-md12">
+                <h3>Horizontal</h3>
+                <Stack style={{ marginBottom: 20 }} horizontal={true} wrap={true} tokens={{ childrenGap: 10 }}>
+                  <Stack.Item grow={1}>
+                    <TextField label="Standard" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Disabled" disabled={true} defaultValue="I am disabled" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Read-only" readOnly={true} defaultValue="I am read-only" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Required " required={true} />
+                  </Stack.Item>
+                </Stack>
+              </div>
+            </div>
+            <Separator styles={{ root: { margin: '30px 0px' } }}>Separate grids</Separator>
+            <div className="ms-Grid-row">
               <div className="ms-Grid-col ms-sm12 ms-md6">
+                <h3>Vertical Column 1</h3>
                 <Stack>
-                  <TextField label="Standard" />
-                  <TextField label="Disabled" disabled={true} defaultValue="I am disabled" />
-                  <TextField label="Read-only" readOnly={true} defaultValue="I am read-only" />
-                  <TextField label="Required " required={true} />
+                  <Stack.Item grow={1}>
+                    <TextField label="Standard" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Disabled" disabled={true} defaultValue="I am disabled" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Read-only" readOnly={true} defaultValue="I am read-only" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Required " required={true} />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Required " required={true} />
+                  </Stack.Item>
                 </Stack>
               </div>
               <div className="ms-Grid-col ms-sm12 ms-md6">
+                <h3>Vertical Column 2</h3>
                 <Stack>
-                  <TextField label="Standard" />
-                  <TextField label="Disabled" disabled={true} defaultValue="I am disabled" />
-                  <TextField label="Read-only" readOnly={true} defaultValue="I am read-only" />
-                  <TextField label="Required " required={true} />
+                  <Stack.Item grow={1}>
+                    <TextField label="Standard" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Disabled" disabled={true} defaultValue="I am disabled" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Read-only" readOnly={true} defaultValue="I am read-only" />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Required " required={true} />
+                  </Stack.Item>
+                  <Stack.Item grow={1}>
+                    <TextField label="Required " required={true} />
+                  </Stack.Item>
                 </Stack>
               </div>
             </div>
